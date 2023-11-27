@@ -5,12 +5,14 @@ import Chip from '@mui/material/Chip';
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import Switch from '@mui/material/Switch';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './frmctrl/home';
+import Profile from './frmctrl/Profile';
 import SignUp from './frmctrl/signup';
 import Login from './frmctrl/login';
-import Navbar from './frmctrl/navbar'
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import HomePage from './frmctrl/home';
+
+
 function App() {
   const [checked, setChecked] = useState(true);
 
@@ -22,18 +24,14 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route  path="/" element={<HomePage/>}/>
-          <Route  path="/a" element={<Login/>}/>
-          <Route  path="/b" element={<SignUp/>}/>
-
+          <Route path="/" element={<HomePage />} />
+          <Route path="/a" element={<Login />} />
+          <Route path="/b" element={<SignUp />} />
+          <Route path="/profile" element={<Profile />} />
          
         </Routes>
-      </Router> 
-    {/* <Navbar/> */}
-      {/* <HomePage/>  */}
-      
-      </div>
-    
+      </Router>
+    </div>
   );
 }
 

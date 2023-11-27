@@ -62,8 +62,19 @@ const handleClickShowPassword = () => setShowPassword((show) => !show);
       event.preventDefault();
     }
     return(
-     <body>
-
+    
+    
+     <body className="aa">
+      <body style={{ margin: 0, padding: "560px", backgroundImage: 'url("https://images.pexels.com/photos/2720447/pexels-photo-2720447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', backgroundSize: 'cover' }}>
+      <div
+        style={{
+          
+          
+          padding: '0px',
+           
+        }}
+      >
+      <div>
         <div style={{border:'3px solid black', padding:'40px'}}>
             <p>
               <AccountCircleIcon style={{fontSize:'50px'}}/>
@@ -124,6 +135,9 @@ const handleClickShowPassword = () => setShowPassword((show) => !show);
         <p>{formValid
         &&(<Alert severity="error">{formValid}</Alert>)}</p>
     </div>
+    </div>
+    </div>
+        </body>
         </body>
     )
         }
